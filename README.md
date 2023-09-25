@@ -1,6 +1,5 @@
 ### :fire: My Stats :
 
-### Hi there 👋
 <p align="center">
   <img src="https://activity-graph.herokuapp.com/graph?username=nik12mcf&bg_color=ffffff&color=000000&line=e05397&point=FFFFFF&hide_border=true&" />
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nik12mcf&theme=github_dark" />
