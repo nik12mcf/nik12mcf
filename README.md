@@ -1,4 +1,4 @@
-### :fire: My Stats :
+### 🔥 My Stats :
 
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nik12mcf&theme=github_dark" />
