@@ -31,7 +31,7 @@
 
 <!-- BUILDING:START -->
 
-| project | what it is | lang | last push |
+| project | description | lang | last push |
 |:--|:--|:-:|:-:|
 | [**osrs-scripts**](https://github.com/nik12mcf/osrs-scripts) | Scripts for Old School Runescape | `Python` | today |
 | [**screen-upscaler**](https://github.com/nik12mcf/screen-upscaler) | — | `Swift` | today |

@@ -264,7 +264,7 @@ def recent_repos():
 
 
 def building_table(repos):
-    rows = ["| project | what it is | lang | last push |", "|:--|:--|:-:|:-:|"]
+    rows = ["| project | description | lang | last push |", "|:--|:--|:-:|:-:|"]
     for r in repos:
         desc = (r["description"] or "—").replace("|", "\\|")
         lang = f"`{r['primaryLanguage']['name']}`" if r["primaryLanguage"] else "—"
