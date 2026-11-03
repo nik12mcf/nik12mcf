@@ -118,7 +118,7 @@ def fmt_date(d, year=False):
 def tile(x, y, w, value, label, sub, color, delay):
     return f"""
   <g class="rise" style="animation-delay:{delay}s">
-    <rect x="{x}" y="{y}" width="{w}" height="104" rx="10" fill="#140a2a" stroke="{color}" stroke-opacity=".45"/>
+    <rect x="{x}" y="{y}" width="{w}" height="104" rx="10" fill="#1d0838" fill-opacity=".85" stroke="{color}" stroke-opacity=".45"/>
     <text x="{x + w / 2}" y="{y + 46}" text-anchor="middle" font-family="{SANS}" font-weight="800" font-size="32" fill="{color}" filter="url(#g)">{escape(value)}</text>
     <text x="{x + w / 2}" y="{y + 72}" text-anchor="middle" font-family="{MONO}" font-size="12" fill="{TEXT}" letter-spacing="1.5">{escape(label)}</text>
     <text x="{x + w / 2}" y="{y + 91}" text-anchor="middle" font-family="{MONO}" font-size="11" fill="{MUTED}">{escape(sub)}</text>
@@ -196,8 +196,11 @@ def render(meta, days, langs, stars):
     H = 470
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0b0418"/><stop offset="1" stop-color="#170830"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#140630"/><stop offset=".7" stop-color="#2a0b47"/><stop offset="1" stop-color="#5a1660"/>
+    </linearGradient>
+    <linearGradient id="dusk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="{CYAN}"/><stop offset=".5" stop-color="{PINK}"/><stop offset="1" stop-color="#ff9a3d"/>
     </linearGradient>
     <linearGradient id="barG" x1="0" y1="1" x2="0" y2="0">
       <stop offset="0" stop-color="{PINK}"/><stop offset="1" stop-color="{CYAN}"/>
@@ -218,6 +221,7 @@ def render(meta, days, langs, stars):
   </style>
 
   <rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="14" fill="url(#bg)" stroke="{PINK}" stroke-opacity=".35" stroke-width="2"/>
+  <rect x="24" y="{H - 6}" width="{W - 48}" height="3" rx="1.5" fill="url(#dusk)" opacity=".8"/>
   <text class="h" x="24" y="40">// STATS</text>
   <text x="{W - 24}" y="40" text-anchor="end" font-family="{MONO}" font-size="11" fill="{MUTED}">{meta["repositories"]["totalCount"]} repos · {stars} ★ · updated {today.strftime("%b %-d, %Y")}</text>
   {"".join(parts)}
