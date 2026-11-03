@@ -1,0 +1,37 @@
+{
+  "repos": 26,
+  "languages": {
+    "Python": 40.9,
+    "Go": 37.7,
+    "Jupyter Notebook": 7.7,
+    "PLpgSQL": 4.1,
+    "TypeScript": 3.7,
+    "HCL": 2.2,
+    "JavaScript": 1.1,
+    "HTML": 0.9,
+    "Shell": 0.9,
+    "CSS": 0.3,
+    "Makefile": 0.3,
+    "Dockerfile": 0.2,
+    "Mermaid": 0.1,
+    "C++": 0.0
+  },
+  "repo_share": {
+    "git": 100,
+    "docker": 23,
+    "gcs": 15,
+    "secretmanager": 12,
+    "tailwind": 12,
+    "vercel": 12,
+    "react": 12,
+    "nextjs": 12,
+    "artifactregistry": 12,
+    "cloudrun": 12,
+    "bigquery": 8,
+    "composer": 8,
+    "dataflow": 4,
+    "threejs": 4,
+    "apigateway": 4,
+    "functions": 4
+  }
+}

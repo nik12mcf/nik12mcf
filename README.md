@@ -16,7 +16,7 @@
 <p align="center"><img src="assets/title-stack.svg" alt="Tech Stack" width="100%" /></p>
 
 <p align="center">
-  <img src="assets/stack.svg" alt="TypeScript, JavaScript, Python, Java, C++, HTML, CSS, React, Next.js, Three.js, Tailwind, Docker, Vercel, Git" width="100%" />
+  <img src="assets/stack.svg" alt="Python, Go, TypeScript, JavaScript, HTML, CSS, C++, React, Next.js, Tailwind, Three.js, BigQuery, Cloud Storage, Cloud Run, Cloud Composer, Cloud Functions, Dataflow, API Gateway, Artifact Registry, Secret Manager, Docker, Vercel, Git" width="100%" />
 </p>
 
 <p align="center"><img src="assets/title-stats.svg" alt="Stats" width="100%" /></p>
