@@ -2,7 +2,7 @@ name: Update profile
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch:
   push:
     branches: [main, master]
@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate stats dashboard
+      - name: Generate stats dashboard + recent repos
         run: python3 scripts/generate.py
         env:
           # Add a PAT with read:user as STATS_TOKEN to include private contributions
@@ -43,6 +43,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/dashboard.svg
+          git add assets/dashboard.svg README.md
           git diff --cached --quiet || git commit -m "chore: refresh stats"
           git push

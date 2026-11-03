@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="84" viewBox="0 0 840 84">
+  <defs>
+    <linearGradient id="l" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00f0ff" stop-opacity="0"/><stop offset="1" stop-color="#00f0ff"/>
+    </linearGradient>
+    <linearGradient id="r" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff9a3d"/><stop offset="1" stop-color="#ff9a3d" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .flicker { animation: fl 7s linear infinite; }
+    @keyframes fl { 0%,40%,44%,100% { opacity: 1 } 42% { opacity: .55 } }
+    @media (prefers-reduced-motion: reduce) { .flicker { animation: none; } }
+  </style>
+  <rect x="120" y="42.0" width="190" height="2" rx="1" fill="url(#l)" filter="url(#glow)"/>
+  <rect x="530" y="42.0" width="190" height="2" rx="1" fill="url(#r)" filter="url(#glow)"/>
+  <g class="flicker" text-anchor="middle" font-family="'Brush Script MT', 'Segoe Script', 'Snell Roundhand', cursive" font-style="italic" font-size="52">
+    <text x="420" y="58.0" fill="#ff2bd6" filter="url(#glow)" opacity=".75">Tech Stack</text>
+    <text x="420" y="58.0" fill="#ff6be3" stroke="#3a0645" stroke-width="1.5" paint-order="stroke">Tech Stack</text>
+  </g>
+</svg>

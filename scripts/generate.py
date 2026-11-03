@@ -15,7 +15,10 @@ from html import escape
 from pathlib import Path
 
 USER = os.environ.get("GH_USER", "nik12mcf")
-OUT = Path(__file__).resolve().parent.parent / "assets" / "dashboard.svg"
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / "assets" / "dashboard.svg"
+README = ROOT / "README.md"
+RECENT = 6
 
 PINK = "#ff2bd6"
 CYAN = "#00f0ff"
@@ -239,11 +242,51 @@ def render(meta, days, langs, stars):
 """
 
 
+def ago(iso):
+    days = (dt.datetime.now(dt.timezone.utc) - dt.datetime.fromisoformat(iso.replace("Z", "+00:00"))).days
+    if days < 1:
+        return "today"
+    for size, unit in ((365, "year"), (30, "month"), (7, "week"), (1, "day")):
+        if days >= size:
+            n = days // size
+            return f"{n} {unit}{'s' if n > 1 else ''} ago"
+
+
+def recent_repos():
+    nodes = gql(
+        """query($login:String!){user(login:$login){
+          repositories(ownerAffiliations:OWNER,privacy:PUBLIC,isFork:false,first:20,
+                       orderBy:{field:PUSHED_AT,direction:DESC}){
+            nodes{name url description pushedAt isArchived primaryLanguage{name}}}}}""",
+        login=USER,
+    )["user"]["repositories"]["nodes"]
+    return [r for r in nodes if r["name"].lower() != USER.lower() and not r["isArchived"]][:RECENT]
+
+
+def building_table(repos):
+    rows = ["| project | what it is | lang | last push |", "|:--|:--|:-:|:-:|"]
+    for r in repos:
+        desc = (r["description"] or "—").replace("|", "\\|")
+        lang = f"`{r['primaryLanguage']['name']}`" if r["primaryLanguage"] else "—"
+        rows.append(f"| [**{r['name']}**]({r['url']}) | {desc} | {lang} | {ago(r['pushedAt'])} |")
+    return "\n".join(rows)
+
+
+def update_readme(repos):
+    start, end = "<!-- BUILDING:START -->", "<!-- BUILDING:END -->"
+    text = README.read_text()
+    head, rest = text.split(start, 1)
+    _, tail = rest.split(end, 1)
+    README.write_text(f"{head}{start}\n\n{building_table(repos)}\n\n{end}{tail}")
+
+
 def main():
     meta, days, langs, stars = fetch()
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(render(meta, days, langs, stars))
     print(f"wrote {OUT}")
+    update_readme(recent_repos())
+    print(f"updated {README}")
 
 
 if __name__ == "__main__":

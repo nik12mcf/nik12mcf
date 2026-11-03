@@ -13,28 +13,34 @@
   <img src="https://komarev.com/ghpvc/?username=nik12mcf&style=for-the-badge&color=00f0ff&label=profile+views" alt="Profile views" />
 </p>
 
-<h3 align="center">⚡ stack</h3>
+<p align="center"><img src="assets/title-stack.svg" alt="Tech Stack" width="100%" /></p>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,python,react,nextjs,threejs,tailwind,html,css,java,cpp,docker,vercel,git&perline=14" alt="stack" />
+  <img src="assets/stack.svg" alt="TypeScript, JavaScript, Python, Java, C++, HTML, CSS, React, Next.js, Three.js, Tailwind, Docker, Vercel, Git" width="100%" />
 </p>
 
-<h3 align="center">📊 stats</h3>
+<p align="center"><img src="assets/title-stats.svg" alt="Stats" width="100%" /></p>
 
 <p align="center">
   <img src="assets/dashboard.svg" alt="GitHub stats" width="100%" />
 </p>
 
-<h3 align="center">🛠 building</h3>
+<p align="center"><img src="assets/title-building.svg" alt="Building" width="100%" /></p>
 
 <div align="center">
 
-| | project | what it is |
-|:-:|:--|:--|
-| 🕹️ | [**study-arcade**](https://github.com/nik12mcf/study-arcade) | The old Quizlet Gravity game, rebuilt |
-| 🌐 | [**personal-website**](https://github.com/nik12mcf/personal-website) | Resume + projects · Next.js / Tailwind |
-| 🌊 | [**marianas-website**](https://github.com/nik12mcf/marianas-website) | 3D site · React Three Fiber |
-| 📈 | [**Finance_Taps**](https://github.com/nik12mcf/Finance_Taps) · [**EMA_Strategy**](https://github.com/nik12mcf/EMA_Strategy) | Market data + trading strategy experiments |
+<!-- BUILDING:START -->
+
+| project | what it is | lang | last push |
+|:--|:--|:-:|:-:|
+| [**study-arcade**](https://github.com/nik12mcf/study-arcade) | Recreate the old quizlet gravity game | `JavaScript` | 1 day ago |
+| [**personal-website**](https://github.com/nik12mcf/personal-website) | Personal Website to Display Resume and Personal Projects | `TypeScript` | 3 months ago |
+| [**Mashey_Asteroid**](https://github.com/nik12mcf/Mashey_Asteroid) | Mashey's Technical Interview Repo. | `Python` | 4 years ago |
+| [**Database**](https://github.com/nik12mcf/Database) | — | `Python` | 5 years ago |
+| [**Amazon_Scraper**](https://github.com/nik12mcf/Amazon_Scraper) | — | `Python` | 5 years ago |
+| [**Hackerrank**](https://github.com/nik12mcf/Hackerrank) | — | — | 5 years ago |
+
+<!-- BUILDING:END -->
 
 </div>
 
