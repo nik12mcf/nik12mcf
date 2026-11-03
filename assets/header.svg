@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="260" viewBox="0 0 840 260">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#05010f"/>
+      <stop offset="0.55" stop-color="#1a0638"/>
+      <stop offset="0.74" stop-color="#3b0a52"/>
+      <stop offset="0.74" stop-color="#07020f"/>
+      <stop offset="1" stop-color="#0d0420"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe45e"/>
+      <stop offset="0.45" stop-color="#ff6b6b"/>
+      <stop offset="1" stop-color="#ff2975"/>
+    </linearGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00f0ff"/>
+      <stop offset="0.5" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#ff2bd6"/>
+    </linearGradient>
+    <mask id="sunStripes">
+      <rect x="300" y="40" width="240" height="160" fill="#fff"/>
+      <rect x="300" y="138" width="240" height="3" fill="#000"/>
+      <rect x="300" y="150" width="240" height="4" fill="#000"/>
+      <rect x="300" y="162" width="240" height="5" fill="#000"/>
+      <rect x="300" y="174" width="240" height="7" fill="#000"/>
+      <rect x="300" y="186" width="240" height="9" fill="#000"/>
+    </mask>
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="sunGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <clipPath id="floor"><rect x="0" y="192" width="840" height="68"/></clipPath>
+    <clipPath id="frame"><rect width="840" height="260" rx="14"/></clipPath>
+  </defs>
+
+  <style>
+    .twinkle { animation: tw 3s ease-in-out infinite; }
+    @keyframes tw { 0%,100% { opacity: .2 } 50% { opacity: 1 } }
+    .flicker { animation: fl 6s linear infinite; }
+    @keyframes fl {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1 }
+      20%, 24%, 55% { opacity: .55 }
+    }
+    .sub { font: 600 15px 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; fill: #b8f7ff; letter-spacing: 1px; }
+    .cursor { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0 } }
+    .pulse { animation: pulse 4s ease-in-out infinite; transform-origin: 420px 150px; }
+    @keyframes pulse { 0%,100% { opacity: .55 } 50% { opacity: .9 } }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="840" height="260" fill="url(#sky)"/>
+
+    <!-- stars -->
+    <g fill="#fff">
+      <circle class="twinkle" cx="48" cy="30" r="1.2"/>
+      <circle class="twinkle" cx="122" cy="74" r="1" style="animation-delay:.6s"/>
+      <circle class="twinkle" cx="190" cy="22" r="1.4" style="animation-delay:1.2s"/>
+      <circle class="twinkle" cx="256" cy="96" r=".9" style="animation-delay:2s"/>
+      <circle class="twinkle" cx="92" cy="140" r="1" style="animation-delay:1.6s"/>
+      <circle class="twinkle" cx="300" cy="40" r="1.1" style="animation-delay:.3s"/>
+      <circle class="twinkle" cx="560" cy="28" r="1.3" style="animation-delay:.9s"/>
+      <circle class="twinkle" cx="618" cy="88" r="1" style="animation-delay:2.4s"/>
+      <circle class="twinkle" cx="690" cy="34" r="1.2" style="animation-delay:1.4s"/>
+      <circle class="twinkle" cx="762" cy="110" r="1" style="animation-delay:.2s"/>
+      <circle class="twinkle" cx="800" cy="52" r="1.4" style="animation-delay:1.9s"/>
+      <circle class="twinkle" cx="728" cy="150" r=".9" style="animation-delay:2.7s"/>
+      <circle class="twinkle" cx="160" cy="170" r=".8" style="animation-delay:.8s"/>
+      <circle class="twinkle" cx="520" cy="70" r=".8" style="animation-delay:2.2s"/>
+    </g>
+
+    <!-- sun -->
+    <circle class="pulse" cx="420" cy="150" r="78" fill="#ff2975" filter="url(#sunGlow)"/>
+    <circle cx="420" cy="150" r="72" fill="url(#sun)" mask="url(#sunStripes)"/>
+
+    <!-- horizon -->
+    <rect x="0" y="191" width="840" height="1.5" fill="#ff2bd6" filter="url(#glow)"/>
+
+    <!-- perspective grid floor -->
+    <g clip-path="url(#floor)" stroke="#ff2bd6" stroke-width="1.2" opacity=".75">
+      <line x1="420" y1="192" x2="-780" y2="260"/>
+      <line x1="420" y1="192" x2="-480" y2="260"/>
+      <line x1="420" y1="192" x2="-180" y2="260"/>
+      <line x1="420" y1="192" x2="120" y2="260"/>
+      <line x1="420" y1="192" x2="270" y2="260"/>
+      <line x1="420" y1="192" x2="420" y2="260"/>
+      <line x1="420" y1="192" x2="570" y2="260"/>
+      <line x1="420" y1="192" x2="720" y2="260"/>
+      <line x1="420" y1="192" x2="1020" y2="260"/>
+      <line x1="420" y1="192" x2="1320" y2="260"/>
+      <line x1="420" y1="192" x2="1620" y2="260"/>
+      <g>
+        <line x1="0" x2="840" y1="192" y2="192">
+          <animate attributeName="y1" values="192;262" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 1 1" begin="0s"/>
+          <animate attributeName="y2" values="192;262" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 1 1" begin="0s"/>
+        </line>
+        <line x1="0" x2="840" y1="192" y2="192">
+          <animate attributeName="y1" values="192;262" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 1 1" begin="-.6s"/>
+          <animate attributeName="y2" values="192;262" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 1 1" begin="-.6s"/>
+        </line>
+        <line x1="0" x2="840" y1="192" y2="192">
+          <animate attributeName="y1" values="192;262" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 1 1" begin="-1.2s"/>
+          <animate attributeName="y2" values="192;262" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 1 1" begin="-1.2s"/>
+        </line>
+        <line x1="0" x2="840" y1="192" y2="192">
+          <animate attributeName="y1" values="192;262" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 1 1" begin="-1.8s"/>
+          <animate attributeName="y2" values="192;262" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 1 1" begin="-1.8s"/>
+        </line>
+      </g>
+    </g>
+
+    <!-- name -->
+    <g class="flicker" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="900" text-anchor="middle">
+      <text x="420" y="112" font-size="58" letter-spacing="6" fill="#ff2bd6" opacity=".55" filter="url(#glow)">NIKOLAI McFALL</text>
+      <text x="420" y="112" font-size="58" letter-spacing="6" fill="url(#name)">NIKOLAI McFALL</text>
+    </g>
+
+    <!-- tagline -->
+    <text class="sub" x="420" y="146" text-anchor="middle">&gt; shipping code since 2016<tspan class="cursor" fill="#ff2bd6">_</tspan></text>
+
+    <!-- frame -->
+    <rect x="1" y="1" width="838" height="258" rx="13" fill="none" stroke="#ff2bd6" stroke-opacity=".35" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+name: Update profile
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+    paths: [scripts/**, .github/workflows/update.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate stats dashboard
+        run: python3 scripts/generate.py
+        env:
+          # Add a PAT with read:user as STATS_TOKEN to include private contributions
+          GH_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Generate contribution snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-dark.svg?palette=github-dark&color_snake=#ff2bd6&color_dots=#160b2b,#3b0a52,#7a1fa2,#c026d3,#00f0ff
+            dist/snake-light.svg?color_snake=#ff2bd6
+
+      - name: Publish snake to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit dashboard
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/dashboard.svg
+          git diff --cached --quiet || git commit -m "chore: refresh stats"
+          git push
