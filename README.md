@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.svg" alt="Nikolai McFall" width="100%" />
+  <a href="https://www.mcfalln.gg"><img src="assets/header.svg" alt="Nikolai McFall" width="100%" /></a>
 </p>
 
 <p align="center">
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://personal-website-ivory-six-36.vercel.app"><img src="https://img.shields.io/badge/website-visit-ff2bd6?style=for-the-badge&logo=vercel&logoColor=white&labelColor=140a2a" alt="Website" /></a>
+  <a href="https://www.mcfalln.gg"><img src="https://img.shields.io/badge/mcfalln.gg-visit-ff2bd6?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=140a2a" alt="mcfalln.gg" /></a>
   <img src="https://komarev.com/ghpvc/?username=nik12mcf&style=for-the-badge&color=00f0ff&label=profile+views" alt="Profile views" />
 </p>
 
