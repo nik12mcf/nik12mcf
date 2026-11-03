@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/nik12mcf">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2800&pause=900&color=00F0FF&center=true&vCenter=true&width=640&lines=Full-stack+TypeScript+%2B+Python;Next.js+%C2%B7+React+%C2%B7+Three.js+%C2%B7+Tailwind;Trading+bots+%26+market+data+tooling;Scrapers%2C+automation%2C+and+side+quests" alt="typing" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2800&pause=900&color=00F0FF&center=true&vCenter=true&width=640&lines=Full-Stack+Engineering;Data+%26+Back-End+Engineering" alt="typing" />
   </a>
 </p>
 
