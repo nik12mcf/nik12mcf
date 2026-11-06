@@ -33,7 +33,7 @@
 
 | project | description | lang | last push |
 |:--|:--|:-:|:-:|
-| [**study-arcade**](https://github.com/nik12mcf/study-arcade) | Recreate the old quizlet gravity game | `JavaScript` | today |
+| [**study-arcade**](https://github.com/nik12mcf/study-arcade) | Recreate the old quizlet gravity game | `JavaScript` | 1 day ago |
 | [**screen-upscaler**](https://github.com/nik12mcf/screen-upscaler) | macOS app: record a screen region and AI-upscale it to 1080p–4K at any FPS — Real-ESRGAN (Core ML, Neural Engine), Apple VideoToolbox super-resolution, or FlashVSR via fal.ai | `Swift` | 3 days ago |
 | [**osrs-scripts**](https://github.com/nik12mcf/osrs-scripts) | Screen-reading Python scripts for Old School RuneScape: record an agility course once, then run laps automatically | `Python` | 3 days ago |
 | [**personal-website**](https://github.com/nik12mcf/personal-website) | Personal Website to Display Resume and Personal Projects | `TypeScript` | 3 months ago |
