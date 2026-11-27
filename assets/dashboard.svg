@@ -43,7 +43,7 @@
   </g>
   <g class="rise" style="animation-delay:0.2s">
     <rect x="430" y="64" width="189" height="104" rx="10" fill="#1d0838" fill-opacity=".85" stroke="#ffe45e" stroke-opacity=".45"/>
-    <text x="524.5" y="110" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="32" fill="#ffe45e" filter="url(#g)">11</text>
+    <text x="524.5" y="110" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="32" fill="#ffe45e" filter="url(#g)">12</text>
     <text x="524.5" y="136" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#e6e6ff" letter-spacing="1.5">CURRENT STREAK</text>
     <text x="524.5" y="155" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#9a8cc2">Nov 16 – now</text>
   </g>
